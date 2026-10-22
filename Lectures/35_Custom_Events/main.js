@@ -1,0 +1,29 @@
+// Custom Events - Пользовательские события
+
+const subscribeBtn = document.querySelector("[data-subscribe-btn]");
+
+subscribeBtn.addEventListener("click", () => {
+    let event;
+
+    if (subscribeBtn.classList.contains("subscription")) {
+        subscribeBtn.classList.remove("subscription");
+        subscribeBtn.textContent = "Subscribe";
+
+        event = new CustomEvent("subscription", {
+            detail: {
+                isSubscribed: false,
+            }
+        });
+    } else {
+        subscribeBtn.classList.add("subscription");
+        subscribeBtn.textContent = "Unsubscribe";
+
+        event = new CustomEvent("subscription", {
+            detail: {
+                isSubscribed: true,
+            }
+        });
+    }
+
+    window.dispatchEvent(event);
+});

@@ -1,0 +1,11 @@
+.block-c {
+  background-color: #891761;
+  color: #c4becf;
+  padding: 2em;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  font-size: 2rem;
+}

@@ -1,0 +1,120 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="styles.css" />
+    <title>Form project</title>
+  </head>
+  <body>
+    <div class="container">
+      <section class="login-section">
+        <h1 class="title">Users App</h1>
+
+        <div class="form-block">
+          <form class="form" data-create-user-form>
+            <div class="control-field">
+              <label for="nameId" class="form-label">Name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="nameId"
+                name="userName"
+                required
+                minlength="2"
+                maxlength="23"
+              />
+            </div>
+
+            <div class="control-field">
+              <label for="cityId" class="form-label">City</label>
+              <input
+                type="text"
+                class="form-control"
+                id="cityId"
+                name="userCity"
+                required
+                minlength="2"
+                maxlength="20"
+              />
+            </div>
+
+            <div class="control-field">
+              <label for="emailId" class="form-label">Email</label>
+              <input
+                type="email"
+                class="form-control form-control-email"
+                id="emailId"
+                name="userEmail"
+                required
+              />
+            </div>
+
+            <div class="control-field">
+              <label for="imagesUrlId" class="form-label">Images</label>
+
+              <select
+                name="userImageUrl"
+                id="imagesUrlId"
+                class="form-control form-control-images"
+                required
+              >
+                <option value="">Image URL</option>
+                <hr />
+                <option
+                  value="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1tlHID-KtnYPWT0fNy_q-o4RBZz8lroSGLgo6bZOS2Q&s=10"
+                >
+                  Cat 1
+                </option>
+                <option
+                  value="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0maOLJ9j31VumNnnFIgvl1A6pDxuaDIyoeDsQ7sU2yg&s=10"
+                >
+                  Cat 2
+                </option>
+                <option
+                  value="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTu5jjPNH21PXRrym45s36EBWQQ85KFrhaX1d-OS4pZjA&s=10"
+                >
+                  Cat 3
+                </option>
+                <option
+                  value="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBzDNypLRcPbME02AatgBq_RkRWUVBYkYoWwRBp9mM7w&s=10"
+                >
+                  Dog 1
+                </option>
+                <option
+                  value="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVc2eHkzKA26dGfeGx7aTgRLX7bYAGfmcEbwvEyWNp5w&s=10"
+                >
+                  Dog 2
+                </option>
+                <option
+                  value="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbpiDCR28txHgvfc0MF_ewyvJ94FnG7r4syZjfry5IRA&s=10"
+                >
+                  Dog 3
+                </option>
+                <option
+                  value="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4mdFXM8N6btATPiGn72QbjFc2LUvcOxl9uaKOYqiXAA&s"
+                >
+                  Wolf 1
+                </option>
+                <option
+                  value="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuPwpmVIdFT0reDX7Z9_owzPhxGMvSUVwvPvQqzwUqZg&s=10"
+                >
+                  Fox 1
+                </option>
+              </select>
+            </div>
+
+            <button type="submit" class="btn submit-btn">Create User</button>
+          </form>
+        </div>
+      </section>
+    </div>
+    <hr />
+
+    <div class="users-container" data-users-container></div>
+
+    <dialog class="edit-form-dialog" data-edit-user-form-dialog></dialog>
+  </body>
+</html>
